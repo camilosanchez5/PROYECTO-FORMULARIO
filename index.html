@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Define el conjunto de caracteres, en este caso UTF-8 para soportar caracteres especiales. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el diseño adaptable para dispositivos móviles. -->
+    <title>Formulario de inscripcion</title> <!-- Título de la página que se muestra en la pestaña del navegador. -->
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula el archivo CSS externo con el diseño del formulario. -->
+</head>
+<body>
+    <div class="form-container"> <!-- Contenedor principal para centrar y estilizar el formulario. -->
+        <h1>Formulario de inscripcion</h1> <!-- Título del formulario. -->
+        <form action="#" method="POST"> <!-- Define el inicio del formulario; envía datos con POST a la misma página (acción "#"). -->
+
+            <!-- Etiqueta y campo de texto corto -->
+            <label for="nombre">Nombre:</label> <!-- Asocia el texto "Nombre" al campo con id="nombre". -->
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required> 
+            <!-- 
+            Campo de texto corto:
+            - type="text": Especifica que es un campo de texto.
+            - id="nombre": Identificador único del campo.
+            - name="nombre": Nombre del campo para enviar datos al servidor.
+            - placeholder="Escribe tu nombre": Muestra un texto de ejemplo en el campo.
+            - required: Hace obligatorio rellenar este campo. 
+            -->
+
+             <!-- Etiqueta y campo de texto corto -->
+            <label for="nombre">correo electronico:</label> <!-- Asocia el texto "Nombre" al campo con id="correo". -->
+            <input type="text" id="correo electronico" name="correo electronico" placeholder="ejemplo@correo.com" required> 
+
+            <!-- Cuadro de listas -->
+            <label for="selecciona un curso">selecciona un curso:</label> <!-- Asocia el texto "País" al cuadro de lista con id="pais". -->
+
+            <select id="selecciona un curso" name="selecciona un curso"> 
+                <!--Lista desplegable:
+                - id="pais": Identificador único del cuadro.
+                - name="pais": Nombre del campo para enviar datos.-->
+                <option value="HTML básico">HTML básico</option>             <!-- Opción para seleccionar HTML básico. -->
+                <option value="Javascript básico">Javascript básico</option>             <!-- Opción para seleccionar Javascript básico. -->
+                <option value="Css básico">Css básico</option>       <!-- Opción para seleccionar Css básico. 
+                 -->
+            </select>
+            <!-- Botones de opción -->
+            <fieldset><!-- Agrupa los botones de opción al frente de Modalidad del curso para accesibilidad y organización. -->
+               <label>Modalidad del curso:</label> <!-- Título del grupo de opciones. -->
+
+               <label for="Online"><input type="radio" id="Online" name="Modalidad del curso" value="Online" required>Online</label>
+                    <!-- Botón de opción:
+                    - type="radio": Especifica que es un botón de opción.
+                    - id="masculino": Identificador único para este botón.
+                    - name="genero": Grupo al que pertenece este botón.
+                    - value="masculino": Valor enviado si se selecciona.
+                    - required: Hace obligatorio seleccionar una opción. 
+                    -->
+                   
+               <label for="Presencial"><input type="radio" id="Presencial" name="Modalidad del curso" value="Presencial" required>Presencial</label>
+                    <!-- Igual que masculino, pero con diferente valor. -->      
+           </fieldset>
+            <!-- Cajas de cheque -->
+            <div><fieldset> <!-- Agrupa las opciones con casillas de chequeo. -->
+
+                <label>Temas de interés:</label> <!-- Título del grupo de casillas de chequeo. -->
+
+                <label for="Frontend"><input type="checkbox" id="Frontend" name=" Temas de interés" value="Frontend">Frontend</label>
+                   <!-- Casilla para "Frontend". -->
+                    
+                <label for="Backend"><input type="checkbox" id="Backend" name="Temas de interés" value="Backend">Backend</label> 
+                    <!-- Casilla para "Backend". -->
+                   
+                <label for="Fullstack"><input type="checkbox" id="Fullstack" name="Temas de interés" value="Fullstack">Fullstack</label>
+                    <!-- Casilla para "Fullstack". --> 
+                    
+            </fieldset></div>
+
+            <!-- Etiqueta y campo de texto largo -->
+            <label for="mensaje">Mensaje:</label> <!-- Asocia el texto "Mensaje" al área de texto con id="mensaje". -->
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí"></textarea> 
+            <!-- 
+            Área de texto:
+            - id="mensaje": Identificador único del área de texto.
+            - name="mensaje": Nombre del campo para enviar datos.
+            - rows="5": Define el número de filas visibles.
+            - placeholder="Escribe tu mensaje aquí": Texto de ejemplo. 
+            -->
+            <center><div>
+            <!-- Botón de envío -->
+            <button type="submit">Enviar</button> <!-- Botón para enviar el formulario. -->
+
+             <!-- Botón de envío -->
+            <button type="submit">Limpiar</button> <!-- Botón para limpiar el formulario. -->
+        </form>
+        </div></center>
+    </div>
+</body>
+</html>
